@@ -1,0 +1,6 @@
+[book]
+authors = ["asobininn"]
+language = "ja"
+multilingual = false
+src = "src"
+title = "作って分かるGASプログラミング超入門"
