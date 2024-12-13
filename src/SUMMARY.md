@@ -15,3 +15,5 @@
     - [変数（その３）](./Session1/Variable3.md)
     - [エラー文](./Session1/ErrorText.md)
     - [関数](./Session1/Function.md)
+    - [オリジナルのスプレッドシート関数を作ってみよう（その１）](./Session1/OriginalFunction.md)
+    - [オリジナルのスプレッドシート関数を作ってみよう（その２）](./Session1/OriginalFunction2.md)
