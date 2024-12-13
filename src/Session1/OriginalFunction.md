@@ -82,7 +82,7 @@ function calcMeterToYard() {
 =IF(A5>=80, "A", "B")
 ```
 
-条件分岐については次の章でより詳しい解説をしているので良ければそちらもご覧ください。この例では`A5`の値が変更された場合、それに連動してこのセルの値も更新されます。今回は敢えて`A5`の値を直接代入し、変化しないようにしてみようと思います。`calcMeterToYard`の下に成績を評価するIF関数を出力する`outputEvalGrade`関数を作ってみましょう。おっとその前に、文字列に関する便利な機能を紹介します。`myFunction`で実験を行います。
+条件分岐については次の章でより詳しい解説をしているので良ければそちらもご覧ください。この例では`A5`の値が変更された場合、それに連動してこのセルの値も更新されます。今回は敢えて`A5`の値を直接代入し、変化しないようにしてみようと思います。`calcMeterToYard`の下に成績を評価するIF関数を出力する`outputEvalScore`関数を作ってみましょう。おっとその前に、文字列に関する便利な機能を紹介します。`myFunction`で実験を行います。
 ```Javascript
 function myFunction() { 
   const name = 'ああああ';
@@ -96,13 +96,13 @@ function myFunction() {
 ```
 文字列の中に変数の値を混ぜたい時、従来の方法では少し面倒に感じませんでしたか。そのような時は「'」の代わりに「\`」で囲い、`${変数名}`とする事で文字列の中に自然に混ぜることができるようになります。
 <br><br>
-気を取り直して、`outputEvalGrade`関数を作ってみましょう。`A5`セルの値を直接代入するので、先ほどの機能が活躍しそうです。
+気を取り直して、`outputEvalScore`関数を作ってみましょう。`A5`セルの値を直接代入するので、先ほどの機能が活躍しそうです。
 
 ```Javascript
-function outputEvalGrade() {
+function outputEvalScore() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  const grade = sheet.getRange('A5').getValue();
-  const output = `=IF(${grade} >= 80, "A", IF(${grade} >= 60, "B", "C"))`;
+  const score = sheet.getRange('A5').getValue();
+  const output = `=IF(${score} >= 80, "A", IF(${score} >= 60, "B", "C"))`;
   sheet.getRange('B5').setValue(output);
 }
 ```
@@ -121,7 +121,7 @@ function outputEvalGrade() {
 function onOpen() {
   const ui = SpreadsheetApp.getUi();
   const menu = ui.createMenu('スクリプト実行');
-  menu.addItem('成績評価', 'outputEvalGrade');
+  menu.addItem('成績評価', 'outputEvalScore');
   menu.addToUi();
 }
 ```
