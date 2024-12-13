@@ -17,3 +17,6 @@
     - [関数](./Session1/Function.md)
     - [オリジナルのスプレッドシート関数を作ってみよう（その１）](./Session1/OriginalFunction.md)
     - [オリジナルのスプレッドシート関数を作ってみよう（その２）](./Session1/OriginalFunction2.md)
+ - [数当てゲームを作ってみよう](./Session2/Title.md)
+    - [ゲームの仕様と枠組みの作成](./Session2/GameRule.md)
+    - [if文](./Session2/if.md)
