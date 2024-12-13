@@ -5,7 +5,7 @@
 Logger.log('Hello, World!');
 ```
 
-### 文字列リテラル
+## 文字列リテラル
 試しにHello, World!の代わりに「こんにちは、世界！」と表示させてみよう。「`」で囲まれた文字列を変更することで、表示させる内容を自由に変更することができます。
 ```Javascript
 function myFunction() {
@@ -22,7 +22,7 @@ function myFunction() {
 ```
 文字列にはエスケープシーケンスという特別な文字がありますがここでは取り扱わないので悪しからず。
 
-### 数値リテラル
+## 数値リテラル
 次のコードを実行してみよう。
 ```Javascript
 function myFunction() {
