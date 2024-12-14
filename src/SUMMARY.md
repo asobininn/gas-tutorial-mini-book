@@ -19,4 +19,6 @@
     - [オリジナルのスプレッドシート関数を作ってみよう（その２）](./Session1/OriginalFunction2.md)
  - [数当てゲームを作ってみよう](./Session2/Title.md)
     - [ゲームの仕様と枠組みの作成](./Session2/GameRule.md)
-    - [if文](./Session2/if.md)
+    - [スタートボタンの作成](./Session2/Init.md)
+    - [if文](./Session2/If.md)
+    - [決定ボタンの作成](./Session2/Guess.md)
