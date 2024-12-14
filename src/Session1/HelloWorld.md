@@ -9,7 +9,7 @@
 
 ## プログラムを書いて実行する
 自動でmyFunctionという関数が生成されているのを確認してください。次のように書き、デバッグの横にあるテキストがmyFunctionとなっていることを確認し、実行ボタンを押してみよう。
-```Javascript
+```js
 function myFunction() {
   Logger.log('Hello, World!');
 }

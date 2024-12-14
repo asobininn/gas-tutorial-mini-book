@@ -14,7 +14,7 @@
 
 うーん難しそうですね、一旦、側だけ用意しておきましょうか。
 
-```Javascript
+```js
 function calcRepayment() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   sheet.getRange('E8').setValue(0);
@@ -53,7 +53,7 @@ function calcRepayment() {
 ***
 
 まず年利とローン年数を月利とローン月数に変換しないといけませんね、一見、式が長そうですが(1 + r)^nが2回登場しているので変数を活用できそうです。
-```Javascript
+```js
 function myFunction() { 
   const princ = 1000000;
   const mInterest = 0.05;
@@ -67,7 +67,7 @@ function myFunction() {
 ## コメント
 実はコードだけを見て何をしているのか分かるプログラマーなんて余程熟達した人かロボットぐらいなものです。大抵の人は、コードに付けられた`コメント`を読んで内容を理解します。ちょっと付けてみましょう。
 
-```Javascript
+```js
 function myFunction() { 
   // 複利法のローンの元金と年利と年数から月々の支払額を計算する
 
@@ -88,7 +88,7 @@ function myFunction() {
 `//`から改行までは`コメント`という扱いになり、プログラムに認識されなくなります。コメントを何の言語で書くかは所属するコミュニティによって異なりますが、可能限り自分にとって読みやすいようにしたいです。
 <br><br>
 複数行を`コメント`にしたい場合は`/* */`を使用します。
-```Javascript
+```js
 /*この行も
 この行も
 この行もコメントです。
@@ -98,7 +98,7 @@ function myFunction() {
 ## 仕上げ
 これらを踏まえて`calcRepayment`関数を完成させましょう。関数が完成したらヤード変換の時と同じように「計算」ボタンに`calcRepayment`を割り当てます。
 
-```Javascript
+```js
 // 複利法のローンの元金と年利と年数から月々の支払額を計算する
 function calcRepayment() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();

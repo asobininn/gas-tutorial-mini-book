@@ -2,7 +2,7 @@
 
 ここからは、変数のより詳細な仕様を見ていきます。次のコードを実行してみよう。
 
-```Javascript
+```js
 function myFunction() {
   var n = 5;
   Logger.log(n);
@@ -25,7 +25,7 @@ function myFunction() {
 ## 変数の初期化省略とnull
 次のコードを実行してみましょう。
 
-```Javascript
+```js
 function myFunction() {
   var n;
   Logger.log(n);
@@ -48,7 +48,7 @@ function myFunction() {
 ### `let`
 次のコードを実行してみましょう。
 
-```Javascript
+```js
 function myFunction() {
   var n = 5;
   Logger.log(n);
@@ -59,7 +59,7 @@ function myFunction() {
 
 問題なく動作します。では次のコードを実行してみましょう。
 
-```Javascript
+```js
 function myFunction() {
   let n = 5;
   Logger.log(n);
@@ -74,7 +74,7 @@ function myFunction() {
 <br><br>
 `let`は同じスコープ内で同名の変数の定義を禁止する役割を持った`var`です。正確な表現のために少し難しい言い方をしましたが同じ名前の変数を定義出来なくするということです。エラーを修正するには、`n`以外の変数名を使用するか、`n`に再代入する形にします。
 
-```Javascript
+```js
 function myFunction() {
   let n = 5;
   Logger.log(n);
@@ -82,7 +82,7 @@ function myFunction() {
   Logger.log(m);
 }
 ```
-```Javascript
+```js
 function myFunction() {
   let n = 5;
   Logger.log(n);
@@ -94,7 +94,7 @@ function myFunction() {
 ### `const`
 同じ要領で次のコードを実行してみましょう。
 
-```Javascript
+```js
 function myFunction() {
   const n = 5;
   Logger.log(n);
@@ -102,7 +102,7 @@ function myFunction() {
   Logger.log(n);
 }
 ```
-```Javascript
+```js
 function myFunction() {
   const n = 5;
   Logger.log(n);

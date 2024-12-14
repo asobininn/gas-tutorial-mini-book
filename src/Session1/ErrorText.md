@@ -3,7 +3,7 @@
 <br><br>
 次のコードを実行してみましょう。
 
-```Javascript
+```js
 function myFunction() {
   Logger.log(n);
 }

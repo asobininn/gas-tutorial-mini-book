@@ -4,7 +4,7 @@
 <br>
 次のコードを実行してみましょう。
 
-```Javascript
+```js
 function myFunction() {
   var a = 10 / 2;
   var b = 3 * 5;
@@ -26,7 +26,7 @@ function myFunction() {
 ## 変数のメリット1
 変数を知る前のコードと見比べてみましょう。
 
-```Javascript
+```js
 function myFunction() {
   Logger.log((10 / 2) + (3 * 5));
   Logger.log((10 / 2) * (10 / 2));
@@ -40,13 +40,13 @@ function myFunction() {
 ## 変数のメリット3
 もう少し実戦的な例を見てみましょう。
 
-```Javascript
+```js
 function myFunction() {
   Logger.log(5 * 2 * 3.14);
 }
 ```
 
-```Javascript
+```js
 function myFunction() {
   var radius = 5;
   var height = 2;
@@ -63,11 +63,11 @@ function myFunction() {
 
 ## 変数の命名規則
 変数名は最初の文字は数字禁止、二文字目以降は数字も文字も指定することができます。
-```Javascript
+```js
 var a123Bc_Def
 ```
 次のコードを見てください。
-```Javascript
+```js
 function myFunction() {
   var プレイヤーネーム = "ああああ";
   Logger.log(プレイヤーネーム);

@@ -11,7 +11,7 @@
 ## 乱数
 ランダムな数字ってどうやって作るんでしょうか、スプレッドシートには`RAND`関数がありましたね。GASでは`Math.random`関数を使用します:
 
-```Javascript
+```js
 function myFunction() {
   // ①
   const value = Math.random();
@@ -21,7 +21,7 @@ function myFunction() {
 
 振る舞いは`RAND`関数と同じで、0以上1未満の範囲のランダムな小数を返します。しかし今回必要なのは1以上100以下の整数ですよね、値を加工してそうなるようにしてみましょう:
 
-```Javascript
+```js
 function myFunction() {
   // ①0以上1未満の小数
   var value = Math.random();
@@ -40,7 +40,7 @@ function myFunction() {
 
 `Math.floor`関数は小数点以下を切り捨てる関数です。注目するべきは④で、③までで生成した乱数に`1`を足すことで1以上100以下の条件を達成しています。5以上100以下の乱数を生成した場合は、`Math.floor(Math.random() * 96) + 5`で求められます。一般化してみましょう:
 
-```Javascript
+```js
 // min以上max以下の乱数を生成する
 function randBetween(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -52,7 +52,7 @@ function randBetween(min, max) {
 ## init関数の作成
 必要な食材が揃いました、早速ボタンが押されたときに実行される`init`関数を作ってみましょう:
 
-```Javascript
+```js
 // ゲームスタートボタンが押された時に実行する関数
 function init() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
@@ -77,7 +77,7 @@ function init() {
 <br><br>
 `myFunction`よりも上、1行目に次のように定義をしてみましょう:
 
-```Javascript
+```js
 const CALLENGE_NUM = 10;
 const MIN_NUM = 1;
 const MAX_NUM = 100;

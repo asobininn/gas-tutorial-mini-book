@@ -2,7 +2,7 @@
 ただ文字や数値を表示していてもつまらないですよね。ここでは算術演算子を学んで、ただ表示させるプログラムから電卓程度の機能を持ったプログラムを作っていきましょう。
 ## 四則演算
 次のプログラムを実行してみましょう。
-``` Javascript
+```js
 function myFunction() {
   Logger.log(3 + 4 * 5 - 6 / 8);
 }
@@ -11,7 +11,7 @@ function myFunction() {
 
 ## MOD演算子
 次のコードを実行してみましょう。
-```Javascript
+```js
 function myFunction() {
   Logger.log(10 % 3);
 }
@@ -25,7 +25,7 @@ n % 2
 
 ## 演算子の優先順位
 四則演算では、加算、減算より乗算、除算を先に行うのがルールですよね。加減算を先に行いたい場合は次のように()で囲みます。
-```Javascript
+```js
 Logger.log((3 + 4) * (5 - 6));
 ```
 数学の中カッコと大カッコは使用できないので注意しましょう。  
@@ -35,13 +35,13 @@ GASにはこの他にもたくさんの演算子があり、全てに優先順�
 
 ## 文字列の加算？
 次のコードを実行してみましょう。
-```Javascript
+```js
 function myFunction() {
   Logger.log('abc' + 'def');
 }
 ```
 GASにおいて、文字列+文字列は文字列の連結を表します。では次のコードは？
-```Javascript
+```js
 function myFunction() {
   Logger.log('abc' + 345);
 }

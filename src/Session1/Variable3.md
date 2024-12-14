@@ -4,7 +4,7 @@
 ## 複合代入演算子
 いつまでも砂糖の話をしていないで、次のコードを実行してみましょう。
 
-```Javascript
+```js
 function myFunction() {
   let n = 10;
   Logger.log(n);
@@ -29,7 +29,7 @@ function myFunction() {
 ## インクリメント
 次のコードを実行してみましょう。
 
-```Javascript
+```js
 function myFunction() {
   let n = 10;
   n++;
@@ -43,7 +43,7 @@ function myFunction() {
 ## デクリメント
 加算があるなら逆の減算もあります。次のコードを実行してみましょう。
 
-```Javascript
+```js
 function myFunction() {
   let n = 10;
   n--;

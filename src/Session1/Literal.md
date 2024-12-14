@@ -1,13 +1,13 @@
 # リテラル
 さて、この世界に来た君に最初の任務を与える。表示させる内容を自由に変更してみよう。コードを観察すると、次のコードが文字を表示させる命令だと推測できます。
 
-```Javascript
+```js
 Logger.log('Hello, World!');
 ```
 
 ## 文字列リテラル
 試しにHello, World!の代わりに「こんにちは、世界！」と表示させてみよう。「`」で囲まれた文字列を変更することで、表示させる内容を自由に変更することができます。
-```Javascript
+```js
 function myFunction() {
   Logger.log('こんにちは、世界！');
 }
@@ -24,7 +24,7 @@ function myFunction() {
 
 ## 数値リテラル
 次のコードを実行してみよう。
-```Javascript
+```js
 function myFunction() {
   Logger.log(-12345);
   Logger.log(3.1415);

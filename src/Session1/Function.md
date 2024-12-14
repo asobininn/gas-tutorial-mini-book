@@ -13,7 +13,7 @@ GASにはどの関数を実行するか選択できる機能が備わってい�
 
 ## まずは習うより慣れろ
 次のコードを実行してみましょう。
-```Javascript
+```js
 function myFunction() {
   var n = add(3, 5);
   var n = calcAverage(10, 13, 17, 21, 23);
@@ -40,7 +40,7 @@ function calcAverage(a, b, c, d, e) {
 
 筆者は関数を業務委託でイメージしています。`add`という会社があり、必要なデータを渡したら後はお任せで、その結果を返してくれます。ここで重要なのは、委託元は委託先の会社がどのような仕事をしているのか知らなくてよいことです。もう少し役に立つ関数を考えてみましょう。
 
-```Javascript
+```js
 function myFunction() {
   let playerX = -2;
   let playerY = 3;
@@ -65,7 +65,7 @@ function calcDistance(x1, y1, x2, y2) {
 ## 流れを追いきれ！
 最初のコードを再掲します。
 
-```Javascript
+```js
 function myFunction() {
   var n = add(3, 5);
   var n = calcAverage(10, 13, 17, 21, 23);
@@ -88,11 +88,11 @@ function calcAverage(a, b, c, d, e) {
 <br><br>
 `add(add(add(add(a, b), c), d), e)`のうち最初に計算される場所はどこでしょうか。演算子の優先順位の話を思い出してください。
 
-```Javascript
+```js
 const n = 3 + -add(4 * 2, 5 / 2);
 ```
 この例を見ると、最初に引数、次に`add()`、次に`-add()`、次に`3 + -add()`となります。分かりやすいように番号を振ってみます。
-```Javascript
+```js
 const n = ⑤「3 + ④「-③「add(①「4 * 2」, ②「5 / 2」)」」」;
 ```
 ついてこれていますか、演算子の優先順位が重要って言ったでしょ。これらは徐々に慣れていけばよいと思います。関数呼び出し演算子は算術演算子や単項演算子「`-`」よりも優先順位が高く、引数から計算されることが分かりました。となると、`add(`地獄は次の順で計算されていそうですね。
@@ -106,7 +106,7 @@ const n = ⑤「3 + ④「-③「add(①「4 * 2」, ②「5 / 2」)」」」;
 ## 戻り値がない関数
 今まで`myFunction`の中で様々なことを試してきましたが、`myFunction`も関数なのであれば`return`を使えるはずですよね。
 
-```Javascript
+```js
 function myFunction() { 
   Logger.log('Hello');
   return;
@@ -115,7 +115,7 @@ function myFunction() {
 
 はい、問題無く使用できます。しかし今までと違って`return`の後に返す値がありませんね。実は戻り値がない関数で`return`を省略した場合、自動的にこれを付け足してくれていました、知らぬ知らぬのうちに使っていたんですね。次のコードを実行してみましょう。
 
-```Javascript
+```js
 function myFunction() { 
   const mistery = showValue(5);
   Logger.log(mistery);
@@ -134,7 +134,7 @@ function showValue(value) {
 <br><br>
 `undefined`の変数にアクセスした際の振る舞いはプログラミング言語によって異なりますが、大抵はエラーになります。本来次のコードの`n`は`undefined`なのですが、JavaScript(GAS)は`undefined`にアクセスする危険性を無くすために自動的に`null`を代入するという仕様になっているんですね。
 
-```Javascript
+```js
 var n;
 ```
 

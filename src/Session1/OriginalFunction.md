@@ -4,7 +4,7 @@
 ## スプレッドシートから値を受け取る
 このコードを実行する前にセル`A1`に任意のデータを入れておいてください。次のコードを実行してみましょう。セキュリティの関係でアクセスの認証を求められます、許可をして問題ありません。途中分かりづらいポイントがありますが、詳細から無題のプロジェクトに移動をクリックしてください。
 
-```Javascript
+```js
 function myFunction() { 
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   const value = sheet.getRange('A1').getValue();
@@ -23,7 +23,7 @@ function myFunction() {
 ## スプレッドシートに値を反映させる
 次のコードを実行してみましょう。
 
-```Javascript
+```js
 function myFunction() { 
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   sheet.getRange('A2').setValue('あいうえお');
@@ -51,7 +51,7 @@ function myFunction() {
 ## メートルからヤードに変換する関数
 メートルからヤードに変換するには`1.0936`をかければよいです、まずは関数を作ります。
 
-```Javascript
+```js
 function calcMeterToYard() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   const meter = sheet.getRange('A2').getValue();
@@ -83,7 +83,7 @@ function calcMeterToYard() {
 ```
 
 条件分岐については次の章でより詳しい解説をしているので良ければそちらもご覧ください。この例では`A5`の値が変更された場合、それに連動してこのセルの値も更新されます。今回は敢えて`A5`の値を直接代入し、変化しないようにしてみようと思います。`calcMeterToYard`の下に成績を評価するIF関数を出力する`outputEvalScore`関数を作ってみましょう。おっとその前に、文字列に関する便利な機能を紹介します。`myFunction`で実験を行います。
-```Javascript
+```js
 function myFunction() { 
   const name = 'ああああ';
   const age = 24;
@@ -98,7 +98,7 @@ function myFunction() {
 <br><br>
 気を取り直して、`outputEvalScore`関数を作ってみましょう。`A5`セルの値を直接代入するので、先ほどの機能が活躍しそうです。
 
-```Javascript
+```js
 function outputEvalScore() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   const score = sheet.getRange('A5').getValue();
@@ -117,7 +117,7 @@ function outputEvalScore() {
 #### メニューの追加
 メニューに独自の項目を追加したい場合もGASから操作することができます、次の関数を作ってみましょう。スプレッドシートを更新すればメニューに「スクリプト実行」の項目が追加されているはずです。
 
-```Javascript
+```js
 function onOpen() {
   const ui = SpreadsheetApp.getUi();
   const menu = ui.createMenu('スクリプト実行');

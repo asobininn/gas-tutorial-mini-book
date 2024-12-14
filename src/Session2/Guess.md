@@ -15,7 +15,7 @@
 ## 正誤判定
 早速「決定」ボタンに紐づける`guess`関数を作り、ゲームの根幹部分を作ってみましょう:
 
-```Javascript
+```js
 // 決定ボタンが押されたときに実行する関数
 function guess() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
@@ -53,7 +53,7 @@ function guess() {
 
 ### 定数オブジェクトの定義
 今回のゲームの例では次のように行います:
-```Javascript
+```js
 const COLOR = {
   BACKGORUND: '#cfe2f3',
   LESS: '#f86363',
@@ -114,7 +114,7 @@ function guess() {
 
 ### ゲームオーバーチェック
 まずは正誤判定の後に残り回数が0になっていたらゲームオーバーになるようにしましょう:
-```Javascript
+```js
 // 決定ボタンが押されたときに実行する関数
 function guess() {
   ・
@@ -141,7 +141,7 @@ function guess() {
 
 ### ゲームオーバーになったら正誤判定以下を行わないようにする
 現状ではゲームオーバーになった後もボタンを押したら正誤判定が行われて残機が減り続けてしまいます。余計な処理を行わないようにするには、正誤判定よりも前に残機のチェックを行い「早期`return`」をすればよいです:
-```Javascript
+```js
 function guess() {
   ・
   ・
@@ -196,7 +196,7 @@ function guess() {
 ### ゲーム開始を押さずに数字を当てようとした場合
 この判定を行うにはどうすればいいでしょうか。ゲーム開始を押していないということはまだ正解の数字が決まっていないということです、我々だけが知る秘密のセルを見ればその判定が行えそうです。
 
-```Javascript
+```js
 function guess() {
   ・
   ・
@@ -224,7 +224,7 @@ function guess() {
 
 ### 入力欄が規定外のデータの場合
 ここでは、OR演算子(`||`)を活用してデータが整数でない場合と1～100でない場合の両方をまとめて成敗します:
-```Javascript
+```js
 function guess() {
   ・
   ・
